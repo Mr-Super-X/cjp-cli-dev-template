@@ -1,0 +1,178 @@
+/* 初始化样式
+------------------------------- */
+:root {
+	--next-color-white: #fff;
+	--next-bg-main-color: #f8f8f8;
+	--next-bg-color: #f5f5ff;
+	--next-border-color-light: #f1f2f3;
+	--next-color-primary-lighter: #ecf5ff;
+	--next-color-success-lighter: #f0f9eb;
+	--next-color-warning-lighter: #fdf6ec;
+	--next-color-danger-lighter: #fef0f0;
+	--next-color-dark-hover: #0000001a;
+	--next-color-menu-hover: rgb(0 0 0 / 20%);
+	--next-color-user-hover: rgb(0 0 0 / 4%);
+	--next-color-setting-main: #e9eef3;
+	--next-color-setting-aside: #d3dce6;
+	--next-color-setting-header: #b3c0d1;
+}
+
+html,
+body,
+#app {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	background-color: var(--next-bg-main-color);
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: transparent;
+}
+
+
+/* flex 弹性布局
+------------------------------- */
+.flex {
+	display: flex;
+}
+
+.flex-auto {
+	flex: 1;
+	overflow: hidden;
+}
+
+.flex-center {
+	@extend .flex;
+
+	flex-direction: column;
+	width: 100%;
+	overflow: hidden;
+}
+
+.flex-margin {
+	margin: auto;
+}
+
+.flex-warp {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	margin: 0 -5px;
+
+	.flex-warp-item {
+		padding: 5px;
+
+		.flex-warp-item-box {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+/* cursor 鼠标形状
+------------------------------- */
+// 默认
+.cursor-default {
+	cursor: default;
+}
+
+// 帮助
+.cursor-help {
+	cursor: help;
+}
+
+// 手指
+.cursor-pointer {
+	cursor: pointer;
+}
+
+// 移动
+.cursor-move {
+	cursor: move;
+}
+
+/* 宽高 100%
+------------------------------- */
+.w100 {
+	width: 100%;
+}
+
+.h100 {
+	height: 100%;
+}
+
+.vh100 {
+	height: 100vh;
+}
+
+.max100vh {
+	max-height: 100vh;
+}
+
+.min100vh {
+	min-height: 100vh;
+}
+
+/* 颜色值
+------------------------------- */
+.color-primary {
+	color: var(--el-color-primary);
+}
+
+.color-success {
+	color: var(--el-color-success);
+}
+
+.color-warning {
+	color: var(--el-color-warning);
+}
+
+.color-danger {
+	color: var(--el-color-danger);
+}
+
+.color-info {
+	color: var(--el-color-info);
+}
+
+/* 字体大小全局样式
+------------------------------- */
+@for $i from 10 through 32 {
+	.font#{$i} {
+		font-size: #{$i}px;
+	}
+}
+
+/* 外边距、内边距全局样式
+------------------------------- */
+@for $i from 1 through 35 {
+	.mt#{$i} {
+		margin-top: #{$i}px;
+	}
+	.mr#{$i} {
+		margin-right: #{$i}px;
+	}
+	.mb#{$i} {
+		margin-bottom: #{$i}px;
+	}
+	.ml#{$i} {
+		margin-left: #{$i}px;
+	}
+	.pt#{$i} {
+		padding-top: #{$i}px;
+	}
+	.pr#{$i} {
+		padding-right: #{$i}px;
+	}
+	.pb#{$i} {
+		padding-bottom: #{$i}px;
+	}
+	.pl#{$i} {
+		padding-left: #{$i}px;
+	}
+}

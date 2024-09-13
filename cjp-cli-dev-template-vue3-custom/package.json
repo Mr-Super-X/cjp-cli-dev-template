@@ -1,0 +1,18 @@
+{
+  "name": "cjp-cli-dev-template-vue3-custom",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "fs-extra": "^11.2.0",
+    "glob": "^10.4.5",
+    "inquirer": "^8.2.4"
+  }
+}
