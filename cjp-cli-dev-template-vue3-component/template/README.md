@@ -1,24 +1,8 @@
-# cjp-cli-dev-template-vue3-component
+# 慕课乐高业务组件库
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 特性
+* **typescript** 
+* Vue3
+* 单元测试
+* 提交发布前验证
+* travis 实现自动发布
