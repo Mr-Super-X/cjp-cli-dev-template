@@ -3,9 +3,8 @@
   "version": "<%= projectVersion %>",
   "description": "<%= componentDescription %>",
   "private": false,
-  "main": "dist/lego-components.umd.js",
-  "module": "dist/lego-components.esm.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/<%= projectName %>.umd.js",
+  "module": "dist/<%= projectName %>.esm.js",
   "author": "Mr.Mikey",
   "license": "MIT",
   "keywords": [
@@ -14,7 +13,22 @@
     "Vue"
   ],
   "files": [
-    "dist"
+    "build",
+    "dist",
+    "examples/",
+    "public/",
+    "src",
+    "test",
+    ".browserslistrc",
+    ".eslintrc.js",
+    ".travis.yml",
+    "babel.config.js",
+    "jest.config.js",
+    "jsconfig.json",
+    "package.json",
+    "README.md",
+    "tsconfig.json",
+    "vue.config.js"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",

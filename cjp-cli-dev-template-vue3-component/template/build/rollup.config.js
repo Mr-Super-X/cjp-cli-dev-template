@@ -17,7 +17,7 @@ const file = type => `dist/${name}.${type}.js`
 
 export { name, file }
 
-let overrides = { 
+let overrides = {
   compilerOptions: { declaration: true },
   exclude: [
     "node_modules",
