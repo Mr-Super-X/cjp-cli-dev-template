@@ -1,8 +1,9 @@
 {
-  "name": "lego-bricks",
-  "version": "1.0.10",
+  "name": "<%= projectName %>",
+  "version": "<%= projectVersion %>",
+  "description": "<%= description %>",
   "private": false,
-  "author": "Viking Zhang",
+  "author": "Mr.Mikey",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run clean && npm run build:esm && npm run build:umd",
@@ -18,7 +19,7 @@
     "hooks": {
       "pre-commit": "npm run lint && npm run test"
     }
-  },  
+  },
   "main": "dist/lego-bricks.umd.js",
   "module": "dist/lego-bricks.esm.js",
   "files": [
