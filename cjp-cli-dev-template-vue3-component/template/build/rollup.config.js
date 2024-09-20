@@ -40,6 +40,7 @@ export default {
     css({
       output(style) {
         !fs.existsSync('dist') && fs.mkdirSync('dist')
+        !fs.existsSync(`dist/${name.split('/')[0]}`) && fs.mkdirSync(`dist/${name.split('/')[0]}`)
         fs.writeFileSync(`dist/${name}.css`, style)
       }
     }),
