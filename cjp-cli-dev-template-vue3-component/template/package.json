@@ -1,7 +1,7 @@
 {
   "name": "<%= projectName %>",
   "version": "<%= projectVersion %>",
-  "description": "<%= description %>",
+  "description": "<%= componentDescription %>",
   "private": false,
   "author": "Mr.Mikey",
   "scripts": {
