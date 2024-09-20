@@ -1,32 +1,28 @@
-import { App } from 'vue'
-export { textDefaultProps , textStylePropNames, TextComponentProps,
-  imageDefaultProps, imageStylePropsNames, ImageComponentProps,
-  shapeDefaultProps, shapeStylePropsNames, ShapeComponentProps,
-  AllComponentProps
-} from './defaultProps'
-
 import LText from './components/LText'
 import LImage from './components/LImage'
 import LShape from './components/LShape'
-
-const components = [
-  LText,
-  LImage,
-  LShape
-]
-
-const install = (app: App) => {
-  components.forEach(component => {
-    app.component(component.name, component)
-  })
-}
-
-export {
+import FinalPage from './components/FinalPage'
+const components = [ 
   LText,
   LImage,
   LShape,
-  install
+  FinalPage
+]
+
+const install = (app: any) => { 
+  components.map(component => {
+    app.use(component)
+  })
 }
+
+export { 
+  install,
+  LText,
+  LImage,
+  LShape,
+  FinalPage
+}
+
 export default {
   install
 }

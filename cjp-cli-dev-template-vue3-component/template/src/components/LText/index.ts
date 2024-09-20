@@ -1,6 +1,6 @@
-import { App } from 'vue'
 import LText from './LText.vue'
-LText.install = (app: App) => {
+
+LText.install = (app: any) => {
   app.component(LText.name, LText)
 }
 

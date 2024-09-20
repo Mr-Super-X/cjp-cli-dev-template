@@ -1,6 +1,6 @@
-import { App } from 'vue'
 import LShape from './LShape.vue'
-LShape.install = (app: App) => {
+
+LShape.install = (app: any) => {
   app.component(LShape.name, LShape)
 }
 
