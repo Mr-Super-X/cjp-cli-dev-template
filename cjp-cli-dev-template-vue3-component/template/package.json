@@ -25,25 +25,24 @@
     "babel.config.js",
     "jest.config.js",
     "jsconfig.json",
-    "package.json",
     "README.md",
     "tsconfig.json",
     "vue.config.js"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "npm run build:es && npm run build:umd",
+    "build": "npm run clean && npm run build:es && npm run build:umd",
     "lint": "vue-cli-service lint",
     "build:es": "rollup --config build/rollup.esm.config.js",
     "build:umd": "rollup --config build/rollup.umd.config.js",
+    "clean": "rimraf ./dist",
     "test": "vue-cli-service test:unit",
     "test:watch": "vue-cli-service test:unit --watch",
-    "prepublishOnly": "npm run test && npm run build"
+    "prepublishOnly": "npm run lint && npm run test && npm run build"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test"
-    }
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.com/"
   },
   "dependencies": {
     "lodash-es": "^4.17.15"
