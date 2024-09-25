@@ -7,6 +7,10 @@
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
+// 模拟使用外部依赖
+import dayjs from 'dayjs';
+
+console.log(dayjs().format("YYYY-MM-DD"));
 
 export default {
   name: "App",

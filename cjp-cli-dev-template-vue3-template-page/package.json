@@ -1,6 +1,6 @@
 {
   "name": "cjp-cli-dev-template-vue3-template-page",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "vue3页面模板复用",
   "main": "index.js",
   "scripts": {
