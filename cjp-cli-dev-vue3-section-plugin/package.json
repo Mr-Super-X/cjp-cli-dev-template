@@ -1,0 +1,15 @@
+{
+  "name": "cjp-cli-dev-vue3-section-plugin",
+  "version": "1.0.0",
+  "description": "代码片段壳应用-webpack插件",
+  "main": "CjpCliDevSectionPlugin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "html-webpack-plugin": "^5.6.0"
+  }
+}
