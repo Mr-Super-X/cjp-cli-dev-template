@@ -1,0 +1,144 @@
+/* 覆盖van-tab组件样式 */
+.van-tabs {
+  background-color: $color-white;
+  .van-tabs__wrap {
+    padding: 0 pxToRem($base-padding-spacing);
+  }
+  .van-tab {
+    font-size: 16px;
+    color: $color-gray-1;
+  }
+  .van-tab--active {
+    color: $color-green;
+  }
+
+  .van-tabs__line {
+    background-color: $color-green;
+    width: pxToRem(128);
+  }
+}
+
+/* 覆盖van-search组件样式 */
+.van-search {
+  .van-search__content {
+    padding-left: var(--van-padding-md);
+    .van-cell {
+      height: 100%;
+      font-size: 16px;
+      .van-field__left-icon {
+        color: $color-gray;
+      }
+      .van-field__control {
+        &::placeholder {
+          color: $color-gray;
+        }
+      }
+      .van-field__clear {
+        color: $color-gray;
+      }
+    }
+  }
+  .van-search__action {
+    color: $theme-color;
+    font-size: 16px;
+    padding-right: 0;
+  }
+}
+
+/* 覆盖van-list样式 */
+.van-list {
+  .van-cell {
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+/* 覆盖van-steps样式 */
+.van-steps {
+  // 纵向步骤条样式
+  &.van-steps--vertical {
+    .van-step__title {
+      margin-left: pxToRem(16);
+    }
+    // 当前active的步骤样式
+    .van-step--process {
+      .van-step__title--active {
+        color: $color-black;
+      }
+
+      .van-step__circle-container {
+        .van-icon {
+          color: $theme-color;
+          font-size: 20px;
+        }
+      }
+
+      .van-step__line {
+        top: 31px;
+      }
+    }
+
+    // 其他步骤样式
+    .van-step--waiting {
+      .van-step__title {
+        color: $color-gray;
+      }
+
+      .van-step__circle-container {
+        .van-step__circle {
+          background-color: rgba(54, 178, 158, 0.4);
+          width: pxToRem(20);
+          height: pxToRem(20);
+        }
+      }
+
+      .van-step__line {
+        top: 26px;
+      }
+    }
+    .van-step--vertical {
+      .van-step__line {
+        height: 60%;
+        background-color: $color-white-1;
+      }
+    }
+  }
+}
+
+/* 覆盖van-popup样式 */
+.van-popup {
+  // 底部弹出且圆角的样式
+  &.van-popup--round.van-popup--bottom {
+    border-top-left-radius: pxToRem(16);
+    border-top-right-radius: pxToRem(16);
+  }
+
+  // van-toast和van-popup共用一个实例，所以在此修改即可
+  &.van-toast {
+    // 由于动态自动引入组件配置，导致van-popup的样式覆盖了手动引入van-toast的样式
+    // 因此van-toast的背景由原本的黑色变成了van-popup白色的背景，这里进行手动修改
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* 覆盖van-picker样式 */
+.van-picker {
+  .van-picker__columns {
+    gap: 0 pxToRem(30);
+    .van-picker-column__item {
+      &.van-picker-column__item--selected {
+        background-color: $color-green-2;
+        border-radius: pxToRem(16);
+        color: $theme-color;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  .van-picker__frame {
+    // 去除picker当前框选内容的边框
+    &::after {
+      border-color: transparent;
+    }
+  }
+}

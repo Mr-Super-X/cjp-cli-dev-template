@@ -1,0 +1,29 @@
+/* 将所有元素的盒子模型改为border-box */
+* {
+  box-sizing: border-box;
+}
+
+/* 设置默认字体大小 */
+html {
+  font-size: 16px;
+}
+
+body {
+  height: 100%;
+  /* 设置全局body底色 */
+  background-color: #F7F8FA;
+}
+
+#app {
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  /* 隐藏滚动条 */
+  display: none;
+}
+
+/* 修复img等行内块元素在移动端有默认边距 */
+img {
+  display: block;
+}

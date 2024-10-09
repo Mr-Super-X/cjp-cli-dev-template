@@ -1,0 +1,29 @@
+# 高版本docker-compose不再支持 version这个标签，注释掉才可以正常运行
+# version: '3.8'
+
+# docker-compose.yml文件顶层健，定义要管理的服务（containers）
+services:
+  # 定义的服务名称，可以随意命名，例如这里命名为 web
+  web:
+    # 指定要使用的docker镜像，这里的APP_VERSION变量来自.env文件，动态配置后则无需手动修改
+    image: registry.dg.com/d4/am-portal-mobile-yzy-fe:${APP_VERSION}-arm64
+    # 指定容器名称，这个名称可以用来引用或管理容器
+    container_name: am-portal-mobile-yzy-fe
+    # 配置用宿主机9020端口访问容器的80端口，使用compose up命令启动后通过http://192.168.1.126:9020/wr-portal-mobile访问页面
+    ports:
+      - '9020:80'
+    # 指定一个或多个包含环境变量的文件，其中定义了容器运行时所需的环境变量
+    env_file:
+      - .env
+    # 其他环境变量配置，这些变量也会传递给容器
+    environment:
+      # 前端页面路径前缀
+      - NGINX_FE_PREFIX=/wr-portal-mobile
+      # 后端接口请求地址
+      - NGINX_BE_SERVICE_HOSTNAME=http://172.16.32.34:38800
+    # 将容器的标准输入设置为一个伪终端（tty）。通常用于交互式进程，使容器可以接收键盘输入等操作
+    tty: true
+    # 设置网络模式为桥接，使得容器可以通过网络连接到主机和其他容器，这是默认的网络模式
+    network_mode: bridge
+    # 设置容器的重启策略为 always，即使容器因为错误而停止，Docker 也会自动重新启动容器
+    restart: always

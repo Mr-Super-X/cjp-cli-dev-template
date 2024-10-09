@@ -1,0 +1,12 @@
+{
+  "name": "cjp-cli-dev-template-vue3-webpack-mobile",
+  "version": "1.0.0",
+  "description": "vue-cli创建的vue3移动端项目模板，使用vant作为UI库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

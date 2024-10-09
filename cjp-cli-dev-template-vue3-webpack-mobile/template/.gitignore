@@ -1,0 +1,32 @@
+.DS_Store
+node_modules
+/dist
+
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 忽略部署静态文件
+deploy/nginx/html
+# 忽略动态生成的脚本
+deploy/**/deploy-pre*.sh
+# 忽略动态生成的tar包
+deploy/**/am-*.tar
+# 忽略镜像包
+am-portal-mobile-yzy-fe-*.tar

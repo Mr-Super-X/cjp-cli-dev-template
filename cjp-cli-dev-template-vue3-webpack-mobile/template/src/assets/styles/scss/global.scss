@@ -1,0 +1,16 @@
+/* v-matchTextHighlight指令匹配文本高亮显示配置 */
+.highlight {
+  color: $theme-color;
+}
+
+/* 不需要content区域的默认内边距 */
+.no-content-padding {
+  .v-content {
+    padding: 0;
+  }
+}
+
+/* 测试提出详情页读取富文本a标签需要主题色高亮显示 */
+a {
+  color: $theme-color;
+}
